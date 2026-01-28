@@ -1,0 +1,113 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+.menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: rgba(51,51,51,0.95);
+    display: flex;
+}
+
+.menu > li{
+    position: relative;
+}
+
+.menu a{
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu a:hover{
+    background: #555;
+}
+
+.submenu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(68,68,68,0.95);
+    display: none;
+    min-width: 160px;
+}
+
+.menu li:hover .submenu{
+    display: block;
+}
+
+section{
+    display: none;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+section:target{
+    display: block;
+}
+
+body:has(section:target) .menu{
+    display: none;
+}
+
+section h2{
+    margin-top: 0;
+    color: #222;
+}
+
+section h3{
+    color: #444;
+}
+
+section p{
+    color: #333;
+    line-height: 1.6;
+}
+
+.volver{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.volver:hover{
+    background: #555;
+}
+
+section img{
+    display: block;
+    margin: 20px auto;
+}
+
+.foto-benja,
+.foto-casino,
+.foto-dormir{
+    max-width: 300px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+section iframe{
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border-radius: 10px;
+}
